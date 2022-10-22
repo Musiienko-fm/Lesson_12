@@ -1,0 +1,206 @@
+
+@font-face{
+	font-family: "Lato-Bold";
+	src: url("../fonts/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato-Bold.woff") format("woff");
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+.wrapper{
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.header{
+	background: url("../img/bg.jpg") center center/cover no-repeat;
+}
+.footer{
+	background: url("../img/bg.jpg") center center/cover no-repeat;
+}
+[class*="container"]{
+	max-width: 998px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.transform__row>div:not(:last-child){
+	margin-right: 100px;
+}
+.transform__container .transform__row:not(:last-child){
+	margin-bottom: 100px;
+}
+.transform__translate>p:hover{
+	transform: translate(10%, 10%);
+}
+.transform__scale>p:hover{
+	transform: scale(0.9);
+}
+.transform__rotate>p:hover{
+	transform: rotate(-90deg);
+}
+.transform__skew>p:hover{
+	transform: skew(-15deg, -15deg);
+}
+.transform__few>p:hover{
+	transform: scale(0.5) rotate(90deg) translate(10%, 10%);
+}
+.transform__origin>p:hover{
+	transform-origin: 100% 100%;
+	transform: rotate(-180deg);
+}
+.transform__perspective{
+	perspective: 200px;
+}
+.transform__perspective>p:hover{
+	transform: rotateX(60deg);
+}
+.transform__backspase{
+	background: url(../img/balloon.svg) center center/50% no-repeat;
+	perspective: 1000px;
+}
+.transform__backspase>p:hover{
+	transform: rotateY(-90deg);
+}
+.shape{
+	display: inline-block;
+	width: 250px;
+	background-color: #c5c5c5;
+}
+.shape p {
+	padding-bottom: 100px;
+	padding-top: 100px;
+	color: #fff;
+	background-color: #333;
+	font-family: "Lato-Bold" ,sans-serif;
+	font-size: 20px;
+	text-align: center;
+	font-weight: 700;
+}
+.description{
+	font-family: "Lato-Bold" ,sans-serif;
+	font-size: 22px;
+	font-weight: 700;
+	text-align: center;
+	color: #fff;
+	padding: 40px 0px;
+}
+.transform__description{
+	color: #191919;
+}
+.transform{
+	margin-bottom: 100px;
+}
+.castle{
+	max-height: 776px;
+	background: url("../img/mountain-bg.jpg") center center/cover no-repeat;
+	overflow: hidden;
+}
+img,
+source {
+	max-width: 100%;
+}
+.castle__container{
+	display: inline-block;
+	position: relative;
+	width: 1430px;
+	height: 776px;
+   right: 10px;
+	top: 50px;
+}
+.castle__big{
+	display: inline-block;
+	position: absolute;
+	width: 1430px;
+	height: 776px;
+	top: 5%;
+	left: 5%;
+}
+.castle__big::after{
+	content: '';
+	position: absolute;
+	background: url("../img/castle-medium.svg") 0 0 no-repeat;
+	width: 139px;
+	height: 398px;
+	top: 10%;
+	right: 3%;
+}
+.castle__big::before{
+	content: '';
+	position: absolute;
+	background: url("../img/castle-small.svg") 0 0 no-repeat;
+	width: 168px;
+	height: 388px;
+	left: 28%;
+	top: 15%;
+}
+.castle__balloon{
+	display: inline-block;
+	position: relative;
+	width: 114px;
+	height: 163px;
+	left: 70%;
+	top:45%;
+}
+.ballon{
+	position: absolute;
+	display: inline-block;
+	z-index: 2;
+	width: 114px;
+	height: 153px;
+}
+.fire{
+	position: absolute;
+	display: inline-block;
+	bottom: -20px;
+	opacity: 0;
+	visibility: hidden;
+}
+.castle__forest{
+	display: inline-block;
+	position: absolute;
+	z-index: 3;
+	width: 1750px;
+	height: 850px;
+	left: 0;
+	bottom: 2%;
+}
+.castle__forest::after{
+	content: '';
+	position: absolute;
+	background: url("../img/bush.svg") 0 0 no-repeat;
+	width: 549px;
+	height: 390px;
+	right: 0;
+	bottom: 0;
+	transform: translateY(30%);		
+}
+.fire{
+	width: 12px;
+	transform: translate(350%,-20%);
+}
+.castle:hover .castle__forest::after{
+	transform-origin: 100% 100%;
+	transform:rotate(-30deg);
+}
+.castle:hover .castle__big::after{
+	transform: scale(1.1);
+}
+.castle:hover .castle__big::before{
+	transform-origin: 50% 80%;
+	transform: rotate(-180deg);
+}
+.castle:active .castle__balloon {
+	transform: translateY(-150px);
+}
+.castle:active .fire {
+	opacity: 1;
+	visibility: visible;
+}
+footer{
+	position: relative;
+	z-index: 3;
+}
+
+
+
+
